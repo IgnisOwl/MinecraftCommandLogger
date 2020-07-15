@@ -1,0 +1,5 @@
+package michalec.connor.sugunioncommandlogger.bungee;
+
+public class CommandHandler extends Command {
+
+}

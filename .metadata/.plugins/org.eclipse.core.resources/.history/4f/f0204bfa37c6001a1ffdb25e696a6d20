@@ -1,0 +1,12 @@
+package michalec.connor.sugunioncommandlogger.bungee;
+
+import net.md_5.bungee.api.plugin.Plugin;
+
+public class Main extends Plugin {
+	DataHandler dataHandler = new DataHandler(this);
+	LogfileHandler = new logfileHandler();
+	
+	public void onEnable() {
+		
+	}
+}

@@ -1,0 +1,14 @@
+package michalec.connor.sugunioncommandlogger.bungee;
+
+public class ToggleCommandHandler extends Command {
+	public ToggleCommandHandler() {
+		super("togglelognotifs");
+	}
+	
+	public void execuite(CommandSender sender, String[] args) {
+		if(sender instanceof ProxiedPlayer) {
+			if(args)
+		}
+	}
+
+}

@@ -1,0 +1,8 @@
+package michalec.connor.sugunioncommandlogger.bungee;
+
+public class LogfileHandler {
+	//quick and dirty logger
+	File log = new File("log.txt");
+	log.createNewFile();
+	FileWriter fw = new FileWriter(log);
+}

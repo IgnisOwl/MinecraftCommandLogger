@@ -1,0 +1,7 @@
+main: michalec.connor.bungee.BungeeMain
+name: OfionBungeeUtils
+author: Connor Michalec
+version: 1.0
+description: ""
+website: https://ofion.us.to/
+prefix: OfionBungeeUtils

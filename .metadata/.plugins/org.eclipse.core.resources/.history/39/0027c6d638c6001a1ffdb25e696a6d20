@@ -1,0 +1,20 @@
+package michalec.connor.sugunioncommandlogger.bungee;
+
+import net.md_5.bungee.api.connection.ProxiedPlayer;
+import net.md_5.bungee.api.plugin.Plugin;
+
+public class Main extends Plugin {
+	DataHandler dataHandler = new DataHandler(this);
+	LogfileHandler logger = new LogfileHandler();
+	
+	public void onEnable() {
+		logger.init();
+		
+		dataHandler.createDirectoryIfMissing("plugins/SUGUnionCommandLogger");
+		dataHandler.copyTemplateIfMissing("staffConf.yml", "plugins/SUGUnionCommandLogger/staffConf.yml");
+	}
+	
+	public Boolean playerHasNotificationEnabled(ProxiedPlayer player) {
+		String UUID = player.getUniqueId().toString();
+	}
+}

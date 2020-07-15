@@ -1,0 +1,6 @@
+main: michalec.connor.bungee.BungeeMain
+name: OfionBungeeUtils
+author: Connor Michalec
+version: 1.0
+description: "Logs the commands and notifies staff when a player executes those commands"
+prefix: SUGUnionCommandLogger
