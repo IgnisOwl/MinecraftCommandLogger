@@ -23,7 +23,7 @@ public class ToggleCommandHandler extends Command {
 				}
 				else {
 					main.setPlayerNotificationSetting((ProxiedPlayer) sender, true);
-					((ProxiedPlayer) sender).sendMessage(TextComponent.fromLegacyText("Enabled command notifications"));
+					((ProxiedPlayer) sender).sendMessage(TextComponent.fromLegacyText("Insufficient Permission"));
 				}
 			}
 			else {

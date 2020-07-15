@@ -27,10 +27,8 @@ public class Main extends Plugin implements Listener {
 	
 	@EventHandler(priority = 0)
 	public void onPlayerChat(ChatEvent event) {
+		System.out.println(event.getMessage());
 		String message = event.getMessage();
-		if(message.charAt(0) == '/') {
-			System.out.println(message);
-		}
 	}
 	
 	public Boolean playerHasNotificationEnabled(ProxiedPlayer player) {

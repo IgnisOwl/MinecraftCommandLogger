@@ -22,15 +22,12 @@ public class Main extends Plugin implements Listener {
 		dataHandler.loadFileYAML("conf");
 		
 		getProxy().getPluginManager().registerListener(this, this);
-		getProxy().getPluginManager().registerCommand(this, (Command) new ToggleCommandHandler(this));
+		getProxy().getPluginManager().registerCommand(this, (Command) new ToggleCommandHandler());
 	}
 	
 	@EventHandler(priority = 0)
 	public void onPlayerChat(ChatEvent event) {
-		String message = event.getMessage();
-		if(message.charAt(0) == '/') {
-			System.out.println(message);
-		}
+		System.out.println(event.getMessage());
 	}
 	
 	public Boolean playerHasNotificationEnabled(ProxiedPlayer player) {

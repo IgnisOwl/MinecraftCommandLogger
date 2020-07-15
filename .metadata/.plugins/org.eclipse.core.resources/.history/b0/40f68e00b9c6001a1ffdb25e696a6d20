@@ -1,4 +1,4 @@
-main: michalec.connor.sugunioncommandlogger.bungee.Main
+main: michalec.connor.sugunioncommandlogger.bungee
 name: SUGUnionCommandLogger
 author: Connor Michalec
 version: 1.0

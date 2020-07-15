@@ -19,15 +19,13 @@ public class ToggleCommandHandler extends Command {
 			if(sender.hasPermission("sugunioncommandlogger.staff")) {
 				if(main.playerHasNotificationEnabled((ProxiedPlayer) sender)) {
 					main.setPlayerNotificationSetting((ProxiedPlayer) sender, false);
-					((ProxiedPlayer) sender).sendMessage(TextComponent.fromLegacyText("Disabled command notifications"));
 				}
 				else {
 					main.setPlayerNotificationSetting((ProxiedPlayer) sender, true);
-					((ProxiedPlayer) sender).sendMessage(TextComponent.fromLegacyText("Enabled command notifications"));
 				}
 			}
 			else {
-				((ProxiedPlayer) sender).sendMessage(TextComponent.fromLegacyText("Insufficient Permission"));
+				((ProxiedPlayer) sender).sendMessage(TextComponent.fromLegacyText("Insufficient Permission")));
 			}
 		}
 	}

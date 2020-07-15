@@ -28,8 +28,8 @@ public class Main extends Plugin implements Listener {
 	@EventHandler(priority = 0)
 	public void onPlayerChat(ChatEvent event) {
 		String message = event.getMessage();
-		if(message.charAt(0) == '/') {
-			System.out.println(message);
+		if(message.split() == "/") {
+			
 		}
 	}
 	
