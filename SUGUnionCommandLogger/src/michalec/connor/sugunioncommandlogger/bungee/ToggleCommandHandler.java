@@ -13,10 +13,11 @@ public class ToggleCommandHandler extends Command {
 		this.main = main;
 	}
 	
+	//on /togglelognotifs
 	@Override
 	public void execute(CommandSender sender, String[] args) {
 		if(sender instanceof ProxiedPlayer) {
-			if(sender.hasPermission("sugunioncommandlogger.staff")) {
+			if(sender.hasPermission("sugunioncommandlogger.staff")) { //make sure executor is staff
 				if(main.playerHasNotificationEnabled((ProxiedPlayer) sender)) {
 					main.setPlayerNotificationSetting((ProxiedPlayer) sender, false);
 					((ProxiedPlayer) sender).sendMessage(TextComponent.fromLegacyText("Disabled command notifications"));

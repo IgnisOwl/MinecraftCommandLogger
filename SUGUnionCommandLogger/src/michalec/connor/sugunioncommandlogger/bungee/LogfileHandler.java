@@ -13,7 +13,7 @@ public class LogfileHandler {
 	BufferedWriter bw;
 	
 	public void init() {
-		log = new File("log.txt");
+		log = new File("plugins/SUGUnionCommandLogger/log.txt");
 		
 		if(!log.exists()) {
 			try {
@@ -24,7 +24,7 @@ public class LogfileHandler {
 		}
 		
 		try {
-			fw = new FileWriter(log);
+			fw = new FileWriter(log, true); //set true for append mode
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -34,8 +34,17 @@ public class LogfileHandler {
 	
 	public void append(String val) {
 		try {
+			bw.newLine();
 			bw.write(val);
 			bw.flush();
+			
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public void cleanup() {
+		try {
 			bw.close();
 		} catch (IOException e) {
 			e.printStackTrace();
