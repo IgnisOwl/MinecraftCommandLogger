@@ -1,5 +1,10 @@
 package michalec.connor.sugunioncommandlogger.bungee;
 
+
+
+import java.sql.Timestamp;
+import java.text.SimpleDateFormat;
+
 import net.md_5.bungee.api.ChatColor;
 import net.md_5.bungee.api.ProxyServer;
 import net.md_5.bungee.api.chat.TextComponent;
@@ -15,6 +20,9 @@ public class Main extends Plugin implements Listener {
 	
 	DataHandler dataHandler = new DataHandler(this);
 	LogfileHandler logger = new LogfileHandler();
+	
+	private static final SimpleDateFormat sdf = new SimpleDateFormat("yyyy.MM.dd-HH::mm::ss");
+	Timestamp timestamp;
 	
 	@Override
 	public void onEnable() {
@@ -67,7 +75,9 @@ public class Main extends Plugin implements Listener {
 			//Log the commands:
 			logger.init(); //reload the file
 			//TODO: Make this customizable: 
-			logger.append(executor.getUniqueId().toString()+"("+executor.getDisplayName()+") ["+executor.getServer().getInfo().getName()+"]: "+message);
+			timestamp = new Timestamp(System.currentTimeMillis());
+			long time = timestamp.getTime();
+			logger.append(sdf.format(time)+" "+executor.getUniqueId().toString()+"("+executor.getDisplayName()+") ["+executor.getServer().getInfo().getName()+"]: "+message);
 			logger.cleanup(); //close the file
 		}
 	}

@@ -9,7 +9,7 @@ public class ToggleCommandHandler extends Command {
 	Main main;
 	
 	public ToggleCommandHandler(Main main) {
-		super("togglelognotifs");
+		super("togglecmdnotifs");
 		this.main = main;
 	}
 	
