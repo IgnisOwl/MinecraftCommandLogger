@@ -11,8 +11,6 @@ import net.md_5.bungee.api.plugin.Plugin;
 import net.md_5.bungee.event.EventHandler;
 
 public class Main extends Plugin implements Listener {
-	//TODO: Option to allow filtering to a specific player(although don't make it save to config and just save to a variable)
-	
 	DataHandler dataHandler = new DataHandler(this);
 	LogfileHandler logger = new LogfileHandler();
 	
@@ -55,7 +53,7 @@ public class Main extends Plugin implements Listener {
 						//If that player has it enabled:
 						if(playerHasNotificationEnabled(player)) {
 							//TODO: Make this customizable: 
-							player.sendMessage(TextComponent.fromLegacyText(ChatColor.DARK_GRAY+"- "+ChatColor.LIGHT_PURPLE+executor.getDisplayName()+ChatColor.DARK_GRAY+" ["+ChatColor.RED+executor.getServer().getInfo().getName()+ChatColor.DARK_GRAY+"] "+ChatColor.GRAY+message));
+							player.sendMessage(TextComponent.fromLegacyText("- "+ChatColor.GOLD+executor.getDisplayName()+ChatColor.DARK_GRAY+" ["+ChatColor.RED+executor.getServer().getInfo().getName()+ChatColor.DARK_GRAY+"] "+ChatColor.GRAY+message));
 						}
 					}
 				}

@@ -11,8 +11,6 @@ import net.md_5.bungee.api.plugin.Plugin;
 import net.md_5.bungee.event.EventHandler;
 
 public class Main extends Plugin implements Listener {
-	//TODO: Option to allow filtering to a specific player(although don't make it save to config and just save to a variable)
-	
 	DataHandler dataHandler = new DataHandler(this);
 	LogfileHandler logger = new LogfileHandler();
 	
